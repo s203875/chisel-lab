@@ -1,0 +1,31 @@
+[
+  {
+    "class":"firrtl.stage.FirrtlFileAnnotation",
+    "file":"test_run_dir\\Mux4Spec589432263\\Mux4.lo.fir"
+  },
+  {
+    "class":"firrtl.transforms.CombinationalPath",
+    "sink":"~Mux4|Mux4>io_y",
+    "sources":[
+      "~Mux4|Mux4>io_a",
+      "~Mux4|Mux4>io_sel",
+      "~Mux4|Mux4>io_b",
+      "~Mux4|Mux4>io_c",
+      "~Mux4|Mux4>io_d"
+    ]
+  },
+  {
+    "class":"logger.LogLevelAnnotation",
+    "globalLogLevel":{
+      
+    }
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.LowFirrtlEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"test_run_dir/Mux4Spec589432263"
+  }
+]

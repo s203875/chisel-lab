@@ -8,10 +8,17 @@ class Accu extends Module {
   })
 
   val res = Wire(UInt())
+  val resetEnableReg = RegInit (0.U(8.W))
+  when (io.setZero) {
+    resetEnableReg := 0.U
+  } .otherwise {
+    resetEnableReg := io.din+resetEnableReg
+  }
+  res := resetEnableReg
 
-  // ***** your code starts here *****
+    // ***** your code starts here *****
 
-  res := 0.U // dummy code to make it compile
+  // dummy code to make it compile
 
   // ***** your code ends here *****
 

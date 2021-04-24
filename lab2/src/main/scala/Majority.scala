@@ -3,6 +3,7 @@
  */
 
 import chisel3._
+import chisel3.util.random.XOR
 
 class Majority extends Module {
   val io = IO(new Bundle {
@@ -18,9 +19,8 @@ class Majority extends Module {
 
   // This too simple implementation will pass the most simplistic tests only (MajoritySimple).
   // Rewrite this expression to express the majority to pass all tests.
-
   // ***** your code starts here *****
-  val res = a
+  val res = (a&b)|(a&c)|(b&c)
   // ***** your code ends here *****
 
   // Hint: this initial exercise shall familiarize you with the testing environment.

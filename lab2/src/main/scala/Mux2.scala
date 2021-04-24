@@ -12,12 +12,15 @@ class Mux2 extends Module {
   val b = io.b
   val sel = io.sel
   val res = Wire(Bool())
-
+//
   // ***** your code starts here *****
-
-  res := b
-
+    res := Mux(sel, b, a)
   // ***** your code ends here *****
+  // Alternativ måde:
+  // when (sel) {
+  //    res := b
+  //  } .otherwise {
+  //    res := a
 
   io.y := res
 }

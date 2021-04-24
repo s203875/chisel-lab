@@ -18,9 +18,16 @@ class Mux4 extends Module {
 
   // create a Mux4 component out of Mux2 components
   // and connect the input and output ports.
-
+    when (io.sel === 0.U) {
+      io.y := io.a
+    } .elsewhen(io.sel === 1.U) {
+      io.y := io.b
+    } .elsewhen(io.sel === 2.U) {
+      io.y := io.c
+    } .otherwise{
+      io.y := io.d
+    }
+}
   // below is dummy code to make this example compile
-  io.y := io.c
 
   // ***** your code ends here *****
-}

@@ -6,11 +6,11 @@ class Count15 extends Module {
   })
 
   val res = Wire(UInt())
-
+  val cntReg = RegInit(0.U(4.W))
   // ***** your code starts here *****
-
-  res := 0.U // dummy code to make it compile
-
+  cntReg := cntReg+1.U
+  //res := 0.U // dummy code to make it compile
+  res := cntReg
   // ***** your code ends here *****
 
   io.dout := res

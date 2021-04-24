@@ -6,10 +6,11 @@ class Count6 extends Module {
   })
 
   val res = Wire(UInt())
-
+  val cntReg = RegInit(0.U(8.W))
+  cntReg := Mux(cntReg === 6.U, 0.U, cntReg+1.U)
   // ***** your code starts here *****
-
-  res := 0.U // dummy code to make it compile
+  res := cntReg
+  // dummy code to make it compile
 
   // ***** your code ends here *****
 

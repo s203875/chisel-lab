@@ -14,9 +14,13 @@ class UseMux2 extends Module {
   // ***** your code starts here *****
 
   // create a Mux2 component and connect it to a, b, sel, and res
+  res := a
+  when (io.sel === 1.U) {
+    res := b
+  }
 
   // below is dummy code to make this example compile
-  res := b
+  //res := b
 
   // ***** your code ends here *****
 
